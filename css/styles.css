@@ -55,6 +55,7 @@ header {
 }
 
 .logo {
+    display: block;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
@@ -104,17 +105,6 @@ header {
     color: var(--color-text);
 }
 
-.contacts-mail::before {
-    display: inline-block;
-    content: "";
-    outline: 1px solid black;
-    width: 16px;
-    height: 12px;
-    background-color: red;
-    margin-right: 10px;
-}  
-
-
 .contacts-tel {
     font-weight: 500;
     font-size: 14px;
@@ -122,18 +112,14 @@ header {
     color: var(--color-text);
 }
 
-.contacts-tel::before {
-    display: inline-block;
-    content: "";
-    outline: 1px solid black;
-    width: 16px;
-    height: 12px;
-    background-color: red;
-    margin-right: 10px;
+
+.contacts-tel:hover,
+.contacts-tel:focus {
+    color: #2196F3;
 }
 
-.contacts:hover,
-.contacts:focus {
+.contacts-mail:hover,
+.contacts-mail:focus {
     color: #2196F3;
 }
 
@@ -175,6 +161,7 @@ header {
 
 .contacts-nav {
     display: flex;
+    align-items: center;
 }
 
 .contacts-nav .item {
@@ -188,6 +175,29 @@ header {
     margin-right: auto;
     border: 1px solid #ECECEC;
 }
+
+.icon-envelope {
+    width: 16px;
+    height: 12px;
+    fill: var(--color-text);
+}
+
+.icon-smartphone {
+    width: 10px;
+    height: 16px;
+    fill: var(--color-text);
+}
+
+.icon-smartphone:hover, 
+.icon-smartphone:focus {
+    fill: currentColor;
+}
+
+.icon-envelope:hover,
+.icon-envelope:focus {
+    fill: #2196F3;
+}
+
 
 
 /* Footer */
@@ -243,8 +253,55 @@ header {
 
 .div-logo {
     margin-bottom: 20px;
+    display: flex;
+    margin-right: 170px;
 }
 
+.footer-h {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    
+}
+
+.socials-list {
+    padding: 0;
+    margin: 0;
+    
+    display: flex;
+    margin-left: -10px;
+    align-items: center;
+}
+.socials-item {
+    flex-basis: calc(100% / 4 -10px);
+    margin-left: 10px;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.socials-item:hover, .socials-item:focus {
+    background: #2196F3;
+}
+
+.socials-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.all-together {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+}
 
 
 /* Main */
@@ -255,7 +312,7 @@ header {
     padding-bottom: 200px;
     background-color: var(--background-footer);
     max-width: 1600px;
-    height: 600px;
+    height: 570px;
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -344,6 +401,30 @@ header {
     width: 270px;
 }
 
+.vector-list {
+    padding: 0;
+    margin: 0;
+    
+    display: flex;
+    margin-left: -30px;
+    margin-bottom: 30px;
+}
+
+.vector-item {
+    flex-basis: calc(100% / 4 -30px);
+    margin-left: 30px;
+    text-align: left;
+    width: 270px;
+    height: 120px;
+    padding: 25px 102px;
+    background: #F5F4FA;
+    border-radius: 4px;
+}
+
+.icon-vector {
+    width: 65px;
+    height: 70px;
+}
 
 
 
@@ -443,7 +524,7 @@ header {
 }
 
 .card-content {
-    padding: 30px 59px;
+    padding: 30px, 59px, 0px, 30px;
 }
 
 .team-workers {
@@ -468,7 +549,56 @@ header {
     line-height: 1.2;
     color: var(--color-text);
     text-align: center;
+    margin-bottom: 16px;
 }
+
+.list-social {
+    padding: 0;
+    margin: 0;
+    
+    display: flex;
+    margin-left: -10px;
+    justify-content: flex-end;
+}
+
+.item-social {
+    flex-basis: calc(100% / 4 -10px);
+    margin-left: 10px;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 30px;
+    fill: #AFB1B8;
+}
+
+.item-social:hover,
+.item-social:focus {
+    fill: #FFFFFF;
+    background-color: #2196F3;
+}
+
+.item-social:last-child {
+   margin-right: 32px;
+}
+
+.item-social:first-child {
+    margin-left: 32px;
+}
+
+.icon-socials {
+    width: 20px;
+    height: 20px;
+    fill: #AFB1B8;
+}
+
+.icon-socials:hover,
+.icon-socials:focus {
+    fill: #FFFFFF;
+    background-color: #2196F3;
+}
+
 
 /* Клиенты */
 
@@ -498,7 +628,6 @@ header {
 .clients-list {
     margin: 0;
     padding: 0;
-    outline: 1px solid black;
     display: flex;
     
 }
@@ -517,9 +646,15 @@ header {
 
 .clients-icon {
     padding: 16px 32px;
-    width: 160px;
-    height: 100px;
+    width: 170px;
+    height: 92px;
+    fill: #AFB1B8;
 }
+
+.clients-icon:hover {
+    fill: #2196F3;
+}
+
 
 
 /* Portfolio html */
