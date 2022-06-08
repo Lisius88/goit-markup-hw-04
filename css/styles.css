@@ -246,10 +246,13 @@ header {
 
 .footer-adress {}
 
+.adress-flex {
+    margin-right: 70px;
+}
+
 .div-logo {
     margin-bottom: 20px;
     display: flex;
-    margin-right: 170px;
 }
 
 .footer-h {
@@ -410,27 +413,19 @@ header {
     width: 270px;
 }
 
-.vector-list {
-    padding: 0;
-    margin: 0;
-    
-    display: flex;
-    margin-left: -30px;
-    margin-bottom: 30px;
-}
-
-.vector-item {
-    flex-basis: calc(100% / 4 -30px);
-    margin-left: 30px;
-    text-align: left;
-    width: 270px;
-    height: 120px;
-    padding: 25px 102px;
+.div-vector {
     background: #F5F4FA;
     border-radius: 4px;
+    display: flex;
+    height: 120px;
+    margin-bottom: 30px;
+    align-items: center;
+        justify-content: center;
 }
 
 .icon-vector {
+    display: block;
+    
     width: 65px;
     height: 70px;
 }
@@ -653,15 +648,14 @@ header {
     padding: 16px 32px;
     width: 170px;
     height: 92px;
-    fill: #AFB1B8;
 }
 
 .clients-icon:hover,
 .clients-icon:focus {
     fill: #2196F3;
+    color: #2196F3;
     border: 1px solid #2196F3;
 }
-
 
 .clients-link {
    display: flex;
@@ -672,6 +666,14 @@ header {
    border-radius: 4px;
    width: 170px;
    height: 92px;
+   fill: #AFB1B8;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+    fill: #2196F3;
+    color: #2196F3;
+    border: 1px solid #2196F3;
 }
 
 
